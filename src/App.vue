@@ -4,6 +4,9 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
+  <nav>
+    <router-link to="/">Form</router-link> |
+  </nav>
   <header class="px-3 bg-slate-300">
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
@@ -16,6 +19,13 @@ import TheWelcome from './components/TheWelcome.vue'
     <TheWelcome />
   </main>
 </template>
+
+<script>
+  export default { 
+      name: 'App',
+    }
+  
+</script>
 
 <style scoped>
 header {
@@ -45,3 +55,4 @@ header {
   }
 }
 </style>
+

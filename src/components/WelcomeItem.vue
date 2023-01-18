@@ -17,7 +17,6 @@
   margin-top: 2rem;
   display: flex;
 }
-
 .details {
   flex: 1;
   margin-left: 1rem;
