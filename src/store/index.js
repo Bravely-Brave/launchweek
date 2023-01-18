@@ -2,13 +2,11 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: { //comme data mais le tableau sera accessible sur l'intégralité sur site 
-    user : [
-      {
-        firstname: 'Keith',
-        lastname: 'UDANI',
-        needs: ['UX/UI',"Javascript"]
-      }
-    ],
+    user : {
+      firstname: 'Keith',
+      lastname: 'UDANI',
+      needs: ['UX/UI',"Javascript"]
+    },
 
     students : [
       {
@@ -26,7 +24,9 @@ export default createStore({
         lastname: 'Coric',
         skills: ['NodeJS','Photoshop','SEA/SEO']
       }
-    ]
+    ],
+
+    matchingStudents : []
   },
 
   getters: {
@@ -34,8 +34,14 @@ export default createStore({
 
   mutations: { 
     filter(){
-      state.students.skills()
-    }
+      const matchingStudents = state.students.filter(student => {
+        return student.skills.some(skill => state.user.needs.includes(skill))
+      })
+      state.matchingStudents = matchingStudents
+
+    },
+
+      
   },
 
   actions: {
