@@ -1,59 +1,42 @@
-<script setup>
+<!-- <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-
-</script>
+</script> -->
 
 <template>
-
-  <header class="px-3 bg-slate-300">
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-
-    
-  </header>
-
-  <div class="p-10 bg-gray-600 text-white">
-      <h1 class="text-2xl">Bonjour {{ myProfile.firstname }}</h1>
-      <h2>Ta recherche actuelle : <span v-for="need, key, index in myProfile.needs" :key="need">{{ need }},</span></h2>
-
-      <p class="pt-7">Personnes qui peuvent t'aider : </p>
-      <div v-for="studentInfo in matchingStudents" :key="studentInfo.firstname" class="py-8">
-          <p>{{ studentInfo.firstname }}</p>   
-          <p>{{ studentInfo.lastname }}</p>   
-          <ul v-for="skill in studentInfo.skills" :key="skill">
-            <li>{{ skill }}</li>
-          </ul>
-      </div>
-    </div>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <router-view></router-view>
+  <nav class="bg-slate-50">
+    <router-link to="/"></router-link> 
+    <router-link to="/main"><img src="./assets/profil.png" alt=""></router-link>
+  </nav>
 </template>
 
 <script>
   export default { 
-      name: 'App',
+    name: 'App',
 
-      computed: {
-        matchingStudents() {
-          return this.$store.state.students.filter(student => {
-            return student.skills.some(skill => this.$store.state.user.needs.includes(skill))
-          })
-        },
-        myProfile() {
-          return this.$store.state.user
-        }
+    computed: {
+      matchingStudents() {
+        return this.$store.state.students.filter(student => {
+          return student.skills.some(skill => this.$store.state.user.needs.includes(skill))
+        })
       },
-    }
-  
+      myProfile() {
+        return this.$store.state.user
+      }
+    },
+};
 </script>
 
-<style scoped>
+<style> 
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
 header {
   line-height: 1.5;
 }

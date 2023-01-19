@@ -1,19 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import formView from '@/views/formView.vue'
-import homeView from '@/views/homeView.vue'
+import formView from '../views/formView.vue'
+import mainView from '../views/mainView.vue'
 
 
+console.log
 const routes = [
   {
-    path: '/form',
-    name: 'form',
-    component: formView
-  }, 
-  {
     path: '/',
-    name: 'home',
-    component: homeView
-  }
+    name: 'Welcome',
+    component: formView 
+  },
+  {
+    path: '/main',
+    name: 'form',
+    component: mainView
+  },
 ]
 
 const router = createRouter({
