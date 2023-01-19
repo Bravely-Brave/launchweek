@@ -1,23 +1,23 @@
 <template>
   <div>
-    <!-- <form> -->
+    <form>
       <div class="p-10 bg-gray-600 text-white">
-        <h1 class="text-2xl">Bonjour {{this.$store.state.myProfile.firstname}}</h1>
+        <h1 class="text-2xl">Bonjour</h1>
       </div>
 
-      <!-- <label>Nom :</label>
+      <label>Nom :</label>
       <input type="text" v-model="form.name" />
       <br />
       <label>Prénom :</label>
       <input type="text" v-model="form.firstname" />
-      <br /> -->
-      <!-- <button href="">J'ai besoin d'aide en </button>
+      <br />
+      <button href="">J'ai besoin d'aide en </button>
       <select v-model="form.difficulties">
         <option v-for="difficulty in difficulties" :key="difficulty">{{ difficulty }}</option>
       </select>
       <br />
-      <button @click.prevent="submitForm">Soumettre</button> -->
-    <!-- </form> -->
+      <button @click.prevent="submitForm, toMain()">Soumettre</button>
+    </form>
   </div>
 </template>
 
@@ -37,7 +37,11 @@ export default {
     submitForm() {
       // Traitement des données du formulaire
       console.log(this.form);
+    },
+    toMain(){
+      window.location.assign("http://localhost:5173/main")
     }
+
   }
 };
 </script>

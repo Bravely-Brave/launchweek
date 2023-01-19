@@ -6,12 +6,23 @@ import favoritesView from '../views/favoritesView.vue'
 import chatsView from '../views/chatsView.vue'
 import profileView from '../views/profileView.vue'
 import helpView from '../views/helpView.vue'
+import moreHelp from '../views/moreHelp.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Welcome',
     component: matchView 
+  },
+  {
+    path: '/help',
+    name: 'help',
+    component: helpView
+  },
+  {
+    path: '/moreHelp',
+    name: 'morehelp',
+    component: moreHelp
   },
   {
     path: '/main',
@@ -38,11 +49,7 @@ const routes = [
     name: 'profil',
     component: profileView
   },
-  {
-    path: '/help',
-    name: 'help',
-    component: helpView
-  },
+
 ]
 
 const router = createRouter({

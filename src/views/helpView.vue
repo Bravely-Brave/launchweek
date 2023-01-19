@@ -3,8 +3,8 @@
     <div class="h-screen grid">
       <h1 class="text-5xl text-black m-auto">Bonjour {{this.$store.state.myProfile.firstname}}</h1>
       <div class="flex flex-col items-center gap-20">
-        <button class="border-none p-4 rounded-md w-3/6 bg-figorange text-figwhite font-bold">J'ai besoin d'aide en ...</button>
-        <button class="border-none p-4 rounded-md w-3/6 bg-figorange text-figwhite font-bold">Je découvre</button>
+        <button @click="newDoc()" class="border-none p-4 rounded-md w-3/6 bg-figorange text-figwhite font-bold" id="vue-app">J'ai besoin d'aide en ...</button>
+        <button @click="discover()" class="border-none p-4 rounded-md w-3/6 bg-figorange text-figwhite font-bold">Je découvre</button>
       </div>
     </div>
 
@@ -25,9 +25,17 @@
     
 
 </template>
+
 <script>
 export default {
-  
+  methods : {
+    newDoc(){
+      window.location.assign("http://localhost:5173/moreHelp")
+    },
+    discover(){
+      window.location.assign("http://localhost:5173/forum")
+    }
+  }
 }
 </script>
 

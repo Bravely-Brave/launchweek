@@ -13,7 +13,11 @@ module.exports = {
       'decorose': "url('/src/assets/decorose.png')",
       'footer-texture': "url('/img/footer-texture.png')",
     },
-    extend: {},
+    extend: {
+      top: {
+        '97' : '97px'
+      }
+    },
   },
   plugins: [],
 }
