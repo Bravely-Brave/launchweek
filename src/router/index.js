@@ -26,7 +26,7 @@ const routes = [
   },
   {
     path: '/main',
-    name: 'form',
+    name: 'main',
     component: mainView
   },
   {

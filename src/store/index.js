@@ -3,9 +3,9 @@ import { createStore } from 'vuex'
 export default createStore({
   state: { //comme data mais le tableau sera accessible sur l'intégralité sur site 
     user : {
-      firstname: 'Keith',
-      lastname: 'UDANI',
-      needs: ['NodeJS',"Javascript"]
+      firstname: 'Jane',
+      lastname: 'DOE',
+      needs: ['Front-end',"Back-end","Protoype UI/UX"]
     },
 
     studentInfo :[
@@ -13,18 +13,19 @@ export default createStore({
         firstname : 'Camila',
         lastname: 'Ogliastri',
         class: 'A4 Créa/design',
-        skills: ['UX/UI','Photoshop','inDesign','Javascript'],
+        skills: ['Front-end','Prototype UI/UX','Illustrator','AfterEffects'],
       },
       {
         firstname : 'Victor',
         lastname: 'Philippe',
-        skills: ['Gestion de projet','Methode AGILE']
+        class: 'A2 Communication digitale & e-buisness',
+        skills: ['Gestion de projet','Marketing digital', 'Planning éditorial']
       },
       {
-        firstname : 'Jeanne',
-        lastname: 'Coric',
-        class: 'A2 Communication digitale & e-buisness',
-        skills: ['NodeJS','Photoshop','SEA/SEO']
+        firstname : 'Lou',
+        lastname: 'Berluette',
+        class: 'A5 Jeux vidéos',
+        skills: ['Back-end','C++','C#','Unreal']
       }
     ],
 

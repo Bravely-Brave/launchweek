@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form>
+    <!-- <form>
       <div class="p-10 bg-gray-600 text-white">
         <h1 class="text-2xl">Bonjour</h1>
       </div>
@@ -17,30 +17,28 @@
       </select>
       <br />
       <button @click.prevent="submitForm, toMain()">Soumettre</button>
-    </form>
+    </form> -->
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      form: {
-        name: "",
-        firstname: "",
-        difficulties: ""
-      },
-      difficulties: ["Axe Coding & digital innovation", "Axe Communication digitale & e-buisness", "Axe Animation 3D", "Axe Jeux Vidéo","Axe Création & design"]
-    };
-  },
+  // // data() {
+  // //   return {
+  // //     form: {
+  // //       name: "",
+  // //       firstname: "",
+  // //       difficulties: ""
+  // //     },
+  // //     difficulties: ["Axe Coding & digital innovation", "Axe Communication digitale & e-buisness", "Axe Animation 3D", "Axe Jeux Vidéo","Axe Création & design"]
+  //   };
+  // },
   methods: {
-    submitForm() {
-      // Traitement des données du formulaire
-      console.log(this.form);
-    },
-    toMain(){
-      window.location.assign("http://localhost:5173/main")
-    }
+    // submitForm() {
+    //   // Traitement des données du formulaire
+    //   console.log(this.form);
+    // },
+  
 
   }
 };
