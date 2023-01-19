@@ -1,14 +1,22 @@
 <!-- <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 </script> -->
 
-<template>
-  <router-view></router-view>
-  <nav class="bg-slate-50">
-    <router-link to="/"></router-link> 
-    <router-link to="/main"><img src="./assets/profil.png" alt=""></router-link>
+
+<template scoped>
+  <nav class="bg-slate-50 p-6 font-bold">
+    <router-link to="/"></router-link>
+    <router-link to="/help"></router-link> 
+    <router-link to="/main"></router-link> 
+    <router-link to="/forum"></router-link> 
+    <router-link to="/favorites"></router-link> 
+    <router-link to="/chats"></router-link> 
+    <router-link to="/profile"></router-link>
   </nav>
+  <img src="./assets/switch.png" alt="" class="absolute z-50 right-10">
+  <img src="./assets/decorose.png" alt="" class="absolute top-0 w-52">
+  <img src="./assets/decoviolet.png" alt="" class="absolute bottom-14 w-24">
+  <router-view></router-view>
+
 </template>
 
 <script>
@@ -34,19 +42,18 @@ import TheWelcome from './components/TheWelcome.vue'
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
-header {
+nav{
   line-height: 1.5;
 }
-
+/* 
 .logo {
   display: block;
   margin: 0 auto 25rem;
-}
+} */
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
@@ -62,6 +69,6 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+} */
 </style>
 

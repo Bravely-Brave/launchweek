@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form>
+    <!-- <form> -->
       <div class="p-10 bg-gray-600 text-white">
         <h1 class="text-2xl">Bonjour {{this.$store.state.myProfile.firstname}}</h1>
       </div>
@@ -11,13 +11,13 @@
       <label>Prénom :</label>
       <input type="text" v-model="form.firstname" />
       <br /> -->
-      <label>J'ai besoin d'aide en </label>
+      <!-- <button href="">J'ai besoin d'aide en </button>
       <select v-model="form.difficulties">
         <option v-for="difficulty in difficulties" :key="difficulty">{{ difficulty }}</option>
       </select>
       <br />
-      <button @click.prevent="submitForm">Soumettre</button>
-    </form>
+      <button @click.prevent="submitForm">Soumettre</button> -->
+    <!-- </form> -->
   </div>
 </template>
 
