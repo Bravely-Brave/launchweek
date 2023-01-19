@@ -1,6 +1,7 @@
 <template class="grid">
   <div class="h-screen grid place-items-center">
     <div class="">
+      <img src="../assets/switch.png" alt="" class="absolute z-10 right-10">
       <h1 class="text-left pb-12 text-2xl font-bold">En quoi voudrais-tu de l'aide ?</h1>
       <div class="">
         <ul class="flex flex-col gap-16">

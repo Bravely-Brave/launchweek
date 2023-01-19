@@ -1,4 +1,5 @@
 <template lang="">
+  <img src="../assets/switch.png" alt="" class="absolute z-10 right-10">
   <div class="p-10 bg-gray-600 text-white text-2xl h-screen grid">
     <h2 class="font-bold">Ta recherche actuelle : <span v-for="need, key, index in this.$store.state.user.needs" :key="need"> {{ need }},</span></h2>
 
@@ -14,7 +15,7 @@
           </div>
           <p>{{  }}</p>   
           <div class="flex flex-col">
-            <ul v-for="skill in studentInfo.skills" :key="skill" class="flex flex-col text-sm">
+            <ul v-for="skill in studentInfo.skills" :key="skill" class="flex flex-col text-sm pr-6">
               <li>{{ skill }}</li>
             </ul>
           </div>

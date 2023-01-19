@@ -1,6 +1,7 @@
 <template lang="">
   <div class=""> 
     <div class="h-screen grid">
+      <img src="../assets/switch.png" alt="" class="absolute z-10 right-10">
       <h1 class="text-5xl text-black m-auto">Bonjour {{this.$store.state.user.firstname}}</h1>
       <div class="flex flex-col items-center gap-20">
         <button @click="newDoc()" class="border-none p-4 rounded-md w-3/6 bg-figorange text-figwhite font-bold">J'ai besoin d'aide en ...</button>

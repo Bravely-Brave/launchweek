@@ -19,7 +19,7 @@ export default createStore({
         firstname : 'Victor',
         lastname: 'Philippe',
         class: 'A2 Communication digitale & e-buisness',
-        skills: ['Gestion de projet','Marketing digital', 'Planning éditorial']
+        skills: ['Gestion de projet', 'Planning éditorial','Front-end']
       },
       {
         firstname : 'Lou',

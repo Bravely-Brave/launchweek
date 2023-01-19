@@ -12,7 +12,6 @@
     <router-link to="/chats"></router-link> 
     <router-link to="/profile"></router-link>
   </nav>
-  <img src="./assets/switch.png" alt="" class="absolute z-10 right-10">
   <img src="./assets/decorose.png" alt="" class="absolute top-0 w-52">
   <img src="./assets/decoviolet.png" alt="" class="absolute bottom-14 w-24">
   <router-view></router-view>
