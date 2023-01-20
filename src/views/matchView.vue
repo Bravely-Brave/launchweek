@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <div class="carte">
+      <div class="carte2">
         <div class="cours">
         <div class="mtn">
           <p>Prochain cours</p>

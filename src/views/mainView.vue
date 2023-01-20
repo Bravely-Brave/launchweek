@@ -1,7 +1,7 @@
 <template lang="">
-  <img src="../assets/switch.png" alt="" class="absolute z-10 right-10">
+  <img src="../assets/switch.png" alt="" class="absolute z-10 right-10" @click="toProfile()">
   <div class="p-10 bg-gray-600 text-white text-2xl h-screen grid">
-    <h2 class="font-bold">Ta recherche actuelle : <span v-for="need, key, index in this.$store.state.user.needs" :key="need"> {{ need }},</span></h2>
+    <h2 class="font-bold">Ta recherche actuelle : <span v-for="need, key, index in this.$store.state.user.needs" :key="need"> {{ need }}</span></h2>
 
     <p class="pt-7 ">On te propose ces profils : </p>
     <div v-for="studentInfo in this.$store.state.studentInfo" :key="studentInfo.firstname" class="py-8">
@@ -27,7 +27,11 @@
   
 <script>
 export default {
-  
+  methods : {
+    toProfile(){
+      window.location.assign("http://localhost:5173/")
+    }
+  }
 }
 </script>
 

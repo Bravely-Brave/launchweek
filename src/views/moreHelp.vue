@@ -1,7 +1,7 @@
 <template class="grid">
   <div class="h-screen grid place-items-center">
     <div class="">
-      <img src="../assets/switch.png" alt="" class="absolute z-10 right-10">
+      <img src="../assets/switch.png" alt="" class="absolute z-10 right-10" @click="toProfile()">
       <h1 class="text-left pb-12 text-2xl font-bold">En quoi voudrais-tu de l'aide ?</h1>
       <div class="">
         <ul class="flex flex-col gap-16">
@@ -11,13 +11,13 @@
             <div class="border p-6 w-full rounded-md absolute top-2 right-2 -z-10"></div>
             <div>
               <div class="flex justify-between pt-4 gap-2 ">
-                <button class="border p-1 w-28 rounded-md shadow-xl hover:bg-figblue ease-in duration-300"><input type="checkbox">Front-end</button>
-                <button class="border p-1 w-28 rounded-md shadow-xl hover:bg-figblue ease-in duration-300"><input type="checkbox">Back-end</button>
-                <button class="border p-1 w-28 rounded-md shadow-xl hover:bg-figblue ease-in duration-300"><input type="checkbox">IOT</button>
+                <button class="border p-1 w-28 rounded-md shadow-xl hover:bg-figpurple ease-in duration-300"><input type="checkbox">Front-end</button>
+                <button class="border p-1 w-28 rounded-md shadow-xl hover:bg-figpurple ease-in duration-300"><input type="checkbox">Back-end</button>
+                <button class="border p-1 w-28 rounded-md shadow-xl hover:bg-figpurple ease-in duration-300"><input type="checkbox">IOT</button>
               </div>
               <div class="flex justify-center pt-2 gap-10">
-                <button class="border p-1 w-32 rounded-md shadow-xl hover:bg-figblue"><input type="checkbox">Prototype UX/UI</button>
-                <button class="border p-1 w-32 rounded-md shadow-xl hover:bg-figblue "><input type="checkbox">DevOPS</button>
+                <button class="border p-1 w-32 rounded-md shadow-xl hover:bg-figpurple ease-in duration-300"><input type="checkbox">Prototype UX/UI</button>
+                <button class="border p-1 w-32 rounded-md shadow-xl hover:bg-figpurple ease-in duration-300"><input type="checkbox">DevOPS</button>
               </div>
             </div>
           </div>
@@ -53,9 +53,11 @@ export default {
   methods: {
     toMain(){
       window.location.assign("http://localhost:5173/main")
+    },
+    toProfile(){
+      window.location.assign("http://localhost:5173/")
     }
   }
-
 }
 </script>
 
